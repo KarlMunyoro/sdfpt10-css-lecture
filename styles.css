@@ -25,7 +25,7 @@ span {
 
 body {
     font-family: Courier;
-    background-color: beige;
+    background-color: pink;
     color: #333;
 }
 
@@ -85,7 +85,7 @@ input {
 
 /* select using attributes */
 input[type="submit"] {
-    background-color: maroon;
+    background-color: white;
     color: whitesmoke;
     cursor: pointer;
 }
