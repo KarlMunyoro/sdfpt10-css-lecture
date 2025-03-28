@@ -83,8 +83,7 @@
             <input type="email" placeholder="Email Address" class="input-field">
             <input type="tel" placeholder="Telephone Number" class="input-field">
             <input type="number" placeholder="Age" class="input-field">
-            <input type="text" placeholder="Where did you learn about us" class="input-field">
-            <input type="radio">
+            <input type="text" id="wheredidyoulearn" placeholder="Where did you learn about us">
             <input type="submit" value="Sign Up" id="contact-submit-btn">
         </form>
 
@@ -92,13 +91,21 @@
             <p> divs are used as general containers for elements, can be used as a footer, nav, text etc. </p>
         </div>
 
+        <table id="data-table" style="display: none">
+            <thead>
+                <th>Email</th>
+                <th>Phone Number</th>
+                <th>Age</th>
+                <th>Referrer</th>
+            </thead>
+            <tbody>
+                
+            </tbody>
+        </table>
+
         <footer>
             <p>footer is a semantic tag representing the actual footer in the document</p>
         </footer>
-
-        <!-- TODO 8: Add all your changes to a GitHub repository --> 
-
-        <!-- Bonus: Add a top menu and on clicking any item navigate to the correct heading. --> 
 
         <script src="index.js"></script>
     </body>

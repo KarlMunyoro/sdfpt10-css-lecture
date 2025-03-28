@@ -73,6 +73,19 @@ newrow2.append(q4);
 
 tablebody.append(newrow2);
 
+
+
+let inputelement=document.createElement("input");
+inputelement.type='text';
+inputelement.placeholder='Assignment';
+
+imageContainer.parentNode.insertBefore(inputelement, imageContainer);
+
+
+inputelement.addEventListener('input', (event)=> {
+    heading.textContent=event.target.value;
+})
+
 let submitbtn=document.querySelector("input[type='submit']")
 
 submitbtn.addEventListener('click', (event)=> {
@@ -80,7 +93,82 @@ submitbtn.addEventListener('click', (event)=> {
     let email=document.querySelector("input[type='email']").value
     let tel=document.querySelector("input[type='tel']").value
     let usernumber=document.querySelector("input[type='number']").value
-    let text=document.querySelector("input[type='text']").value
+    let text=document.getElementById("wheredidyoulearn").value
+    populatetable(email, tel, usernumber, text);
 })
 
 
+
+
+function populatetable(emailaddress, telephoneno, usersnumber, inputtext)
+{
+    let table=document.getElementById("data-table");
+    table.style.display="table"
+    let tblbody=document.querySelector("#data-table tbody");
+    let row1=document.createElement("tr");
+    let d1=document.createElement("td");
+    d1.textContent=emailaddress;
+    row1.append(d1);
+    let d2=document.createElement("td");
+    d2.textContent=telephoneno;
+    row1.append(d2);
+    let d3=document.createElement("td");
+    d3.textContent=usersnumber;
+    row1.append(d3);
+    let d4=document.createElement("td");
+    d4.textContent=inputtext;
+    row1.append(d4);
+    tblbody.append(row1);
+}
+
+
+// 1. Get all the type of events that can be used as EventListeners
+// 2. Read and demonstrate your understanding of hoisting in JavaScript (what will work and what won't)
+// 3. Create an Input element above the div with the class "image-container" using JavaScript
+      // - Add an eventlistener to this input element that will change the text of the main h1
+
+// 4. Add an event listener to the Submit Button
+    // - Capture the email, telephone, age and referee and display them in a tab
+
+
+/*
+Mouse
+1. click
+2. double Click
+3. mouseover
+4. mouseout
+5. mousemove
+
+
+Keyboard
+1. keydown- when key is pressed down
+2. keypress- triggered when a key is pressed
+3. keyup- occurs when a key is released
+
+Form 
+1. submit- triggered when a form is submitted
+2. change- happens when the value of an input field changes
+3. focus- occurs when an element gains focus (eg. when you click into an input box)
+4. blur- happens when an element loses focus
+
+Window
+1.unload
+2.resize
+3.scroll
+4.beforeunload
+
+Clipboard
+1. copy
+2. cut
+3. paste
+
+Media
+1. play
+2. pause
+3. ended
+
+Custom(Developer-created)
+Developers can create their own using customevents and dispatch them using dispatchevents
+
+
+*/
